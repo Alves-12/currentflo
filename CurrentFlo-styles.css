@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+    scroll-behavior: smooth;
+}
+body{
+    background: var(background-color);
+}
+.logoCurrentFlo{ display: flex; 
+    height: 20px; width: 50px;
+
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10% ;
+
+}
+video{
+    position: absolute;
+    width: 100%;
+    min-height: 80%; background: scroll;
+    
+}
+button{
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: 10px;
+    background: rgba(171, 94, 94, 0.51);
+    cursor: pointer;
+}
+/*  .social_media{
+        width:"50px"; 
+        height: "50px"
+} */
+.social-media {
+    list-style: none;
+    display: inline-block;
+    padding: 0px 20px;
+    
+}
+
+
+footer{
+    display: flex;
+}
