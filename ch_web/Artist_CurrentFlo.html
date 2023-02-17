@@ -1,0 +1,250 @@
+<!-- Artists:-->
+
+<!--artist picture: when hovered leads to more info on the artist + mini biography 
+              : when clicked leads to latest release music video 
+              + documentary and links to watch + subscription detail -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists</title>
+    <link rel="stylesheet" href="Artist-styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="CurrentFlo.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="HomepageCF.css">
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">W Records.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar code below, linking to all areas of the website.-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto list-unstyled">
+                    <!-- CHANGE NAME OF JOIN US BUTTON!-->
+                    <button class="btn btn-outline-dark"> Join Us </button>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Homepage_CurrentFlo.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Artist_CurrentFlo.html">Artist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Shop_CurrentFlo.html">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ContactUs">Contact</a>
+                    </li>
+                </ul>
+                <!-- remove search engine?-->
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav> <!-- END // NAVBAR -->
+    <h1>STARING</h3>
+        <div class="wrapper mb-5">
+            <video src="videos/Chris Brown_Under The Influence Tour.mp4" class="slide1" id="slide1" controls></video>
+            <video src="videos/Teyana_Taylor's House Of Petunia .mp4" class="slide2" id="slide2" controls></video>
+            <video src="videos/AlanaMaria_SOS.mp4" class="slide3" id="slide3" controls></video>
+        </div>
+
+        <script>
+            var slide1 = document.getElementById('slide1');
+            var slide2 = document.getElementById('slide2');
+            var slide3 = document.getElementById('slide3');
+            var slide4 = document.getElementById('slide4');
+
+            slide1.onended = function () {
+                slide2.play();
+                slide1.style.opacity = 0;
+                slide2.style.opacity = 1;
+            }
+            slide2.onended = function () {
+                slide3.play();
+                slide2.style.opacity = 0;
+                slide3.style.opacity = 1;
+            }
+            slide3.onended = function () {
+                slide1.play();
+                slide3.style.opacity = 0;
+                slide2.style.opacity = 1;
+            }
+
+
+        </script>
+
+
+        <!--<section>
+        <img src="images/ChrisBrownCover .jpeg" alt="CBreezy.png">
+        <img src="images/BRobCover.jpeg" alt="BRob.png">
+        <img src="images/EllaMaiCover.jpeg" alt="EllaMai.png">
+        <img src="images/JvckJamesCover.jpeg" alt="JvckJames.png">
+        <img src="images/AlanaMariaCover.png" alt="AlanaMAria.png">
+    </section>-->
+        <div class="container">
+            <h2>HOT RN!</h2>
+            <div class="table-responsive">
+                <table class="table mt-5 ">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Rank</th>
+                            <th>Hit</th>
+                            <th>Artist</th>
+                            <th>Peak Pos</th>
+                            <th>Wks on Charts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1</td>
+                            <td>Early 2K</td>
+                            <td>Chris Brown</td>
+                            <td>#1</td>
+                            <td>16</td>
+                        <tr>
+                            <td>#2</td>
+                            <td>How You Want it</td>
+                            <td>Teyana Taylor</td>
+                            <td>#2</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>#3</td>
+                            <td>Reasons</td>
+                            <td>Alana Maria</td>
+                            <td>#2</td>
+                            <td>26</td>
+                        </tr>
+                        <tr>
+                            <td>#4</td>
+                            <td>Show Me Love</td>
+                            <td>Alana Maria</td>
+                            <td>-</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>#5</td>
+                            <td>Bet I</td>
+                            <td>Jaquees</td>
+                            <td>-</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>#6</td>
+                            <td>No Drama</td>
+                            <td>Jvck James </td>
+                            <td>#4</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>#7</td>
+                            <td>Made It</td>
+                            <td>Teyana Taylor</td>
+                            <td>#1</td>
+                            <td>43</td>
+                        </tr>
+                        <tr>
+                            <td>#8</td>
+                            <td>Soldier</td>
+                            <td>Jaquees</td>
+                            <td>#6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>#9</td>
+                            <td>Trason</td>
+                            <td>B Rob</td>
+                            <td>#3</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>#10</td>
+                            <td>Russian Roulette</td>
+                            <td>Rihanna</td>
+                            <td>#1</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>#11</td>
+                            <td>X</td>
+                            <td>Chris Brown</td>
+                            <td>#1</td>
+                            <td>47</td>
+                        </tr>
+                        <tr>
+                            <td>#12</td>
+                            <td>Add me in</td>
+                            <td>Chris Brown</td>
+                            <td>#1</td>
+                            <td>43</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="logo" src="images/CurrentFloLogo.jpg" alt="">
+                        </div>
+                        <div class="col-md-4">
+                            <h5> About Us </h5>
+                            <ul>
+                                <li><a href="">Demo</a></li>
+                                <li><a href="">Founders</a></li>
+                                <li><a href="">Investments</a></li>
+                                <li><a href="">HQ tour</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Careers</h5>
+                            <ul>
+                                <li><a href="#">Jobs</a></li>
+                                <li><a href="#">Teams</a></li>
+                                <li><a href="https://milocostudios.com/studios/usa-recording-studios/">Locations</a></li>
+                                <li><a href="">Interview tips</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h5> Help </h5>
+    
+                            <ul>
+                                <li><a href="#">Newsletter</a></li>
+                                <li><a href="mailto:Currentflo@gmail.com">FAQ</a></li>
+                                <li><a href="https://pmc.com/terms-of-use/">Terms of use</a></li>
+                                <li><a href="https://pmc.com/privacy-policy/">Privacy & Cookies Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            </div>
+        </footer> <!-- END // FOOTER -->
+</body>
+
+</html>

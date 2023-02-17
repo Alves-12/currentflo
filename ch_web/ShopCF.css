@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+*{
+    font-family: 'Dosis', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    transition: all 0.4s;
+    text-transform: capitalize;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: #eee;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container .product-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, mimax(30rem, 1fr));
+    gap: 2rem;
+}
+.container .product-container .product{
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #fff;
+    box-shadow: 0.5rem 1rem rgba(0,0,0,0.1);
+    outline: 1rem rgb(232, 170, 56);
+    outline-offset: -1.5rem;
+    cursor: pointer;
+}
+
+.container .product-container .product :hover{
+    outline: 1rem rgb(232, 170, 56) ;
+    outline-offset: -1.5rem;
+}
+
+.container .product-container .product img{
+    height: 25rem;
+}
+.container .product-container .product img :hover{
+    transform: scale(0.9);
+}
+.container .product-container .product h3{
+    padding: 0.5rem 0;
+    font-size: 2rem;
+    color: #444;
+}
+
+.container .product-container .product h3:hover{ 
+    color: rgb(232, 170, 56);
+}
+.container .product-container .product .price{
+    font-size: 2rem;
+    color: #444;
+}
+
+.products-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    background: (0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.products-preview .preview{
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: #eee;
+    position: relative;
+    margin: 2rem;
+    width: 40rem;
+}
+
+.products-preview .preview.active{
+display: inline-block;
+} 
+
+.products-preview .preview img{
+    height: 30rem;
+    position: relative;
+    cursor: pointer;
+    top: 1rem;
+    right: 1.5rem;
+    color: rgb(232, 170, 56) ;
+    font-size: 4rem;
+}
+.products-preview .preview .fa-times :hover{
+transform: rotate(90deg);
+}
+
+.products-preview .preview h3{
+    color: rgb(232, 170, 56);
+    padding: 5rem 0;
+    font-size: 2.5rem;
+}
+
+.products-preview .preview .price{
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    color: rgb(232, 170, 56);
+}
+.products-preview .preview .buttons{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.products-preview .preview .buttons a{
+    flex: 1 1 16rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    color:rgb(232, 170, 56);
+    border: 0.1rem  #444;
+}
+.products-preview .preview .buttons a.cart {
+    background:日#444;
+    color: #fff;
+}
+
+.products-preview .preview .buttons a.cart :hover{
+    background:#444;
+    color: #fff;
+}
+
+.products-preview .preview .buttons a.buy:hover{
+    background: 日#444;
+    color: #fff;
+}
+
+@media (max-width:450px){
+   
+    html{
+    font-size: 50%;}
+}
+
+@media (max-width:768px){
+   
+   .products-preview img{
+    height: 25rem;
+   }
+}
+
+@media (max-width:450px){
+   
+    html{
+    font-size: 50%;}
+}
+
